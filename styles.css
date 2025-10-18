@@ -395,7 +395,7 @@ nav.nav-glass::after {
   margin: 0 0 10px;
   line-height: 80px;
   font-weight: 300;
-  font-family: "Vision", sans-serif;
+  font-family: 'Vision', sans-serif;
 }
 .hero-copy h1 span {
   font-size: clamp(28px, 7vw, 100px);
@@ -1037,7 +1037,7 @@ nav.nav-glass::after {
   text-align: center;
   flex: 1 1 100%;
   color: #d19cff;
-  font-family: "Vision", "Manrope", sans-serif;
+  font-family: 'Vision', "Manrope", sans-serif;
   font-size: 20px;
 }
 
@@ -1376,7 +1376,7 @@ nav.nav-glass::after {
 
 .connect-sphere .connect-sphere__title {
   font-size: 2.3rem;
-  font-family: "Vision", sans-serif;
+  font-family: 'Vision', sans-serif;
   margin-bottom: -10px;
   color: #fff;
 }
@@ -1467,5 +1467,6 @@ nav.nav-glass::after {
 .connect-sphere .connect-sphere__social a:focus-visible::after {
   inset-block-start: 0;
 }
+
 
 
