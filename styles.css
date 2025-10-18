@@ -384,9 +384,9 @@ nav.nav-glass::after {
   padding: 8vh 3vw 6vh 3vw;
 }
 @font-face {
-  font-family: "Vision";
-  src: url("Vision.ttf") format("truetype");
-  src: url("Agern-Bold.ttf") format("truetype");
+  font-family: 'Vision';
+  src: url('Vision.ttf') format('truetype');
+  src: url('Agern-Bold.ttf') format('truetype');
 
   font-style: normal;
 }
@@ -1467,4 +1467,5 @@ nav.nav-glass::after {
 .connect-sphere .connect-sphere__social a:focus-visible::after {
   inset-block-start: 0;
 }
+
 
