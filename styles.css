@@ -384,10 +384,9 @@ nav.nav-glass::after {
   padding: 8vh 3vw 6vh 3vw;
 }
 @font-face {
-  font-family: 'Vision';
-  src: url('Vision.ttf') format('truetype');
-  src: url('Agern-Bold.ttf') format('truetype');
-
+ font-family: "Vision";
+  src: url("Vision.ttf") format("truetype");
+ font-weight: normal;
   font-style: normal;
 }
 .hero-copy h1 {
@@ -395,7 +394,7 @@ nav.nav-glass::after {
   margin: 0 0 10px;
   line-height: 80px;
   font-weight: 300;
-  font-family: 'Vision', sans-serif;
+  font-family: "Vision", sans-serif;
 }
 .hero-copy h1 span {
   font-size: clamp(28px, 7vw, 100px);
@@ -1467,6 +1466,7 @@ nav.nav-glass::after {
 .connect-sphere .connect-sphere__social a:focus-visible::after {
   inset-block-start: 0;
 }
+
 
 
 
