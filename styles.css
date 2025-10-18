@@ -256,15 +256,15 @@ nav.nav-glass::after {
   top: 50%;
   transform: translate(-50%, -50%);
   font-weight: 900;
-  font-size: clamp(80px, 18vw, 240px);
-  font-family: "Biosphere", Courier, monospace;
+  font-size: clamp(80px, 18vw, 320px);
+  font-family: "League Gothic", sans-serif;
   opacity: 0.9;
   white-space: nowrap;
   z-index: 1;
   text-transform: uppercase;
   pointer-events: none;
   font-size: 650px;
-  background: linear-gradient(to bottom, #9b5cff66, #a527ff00);
+  background: linear-gradient(to bottom, #9b5cff66, #9b5cff00);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   /* for firefox */
@@ -384,17 +384,18 @@ nav.nav-glass::after {
   padding: 8vh 3vw 6vh 3vw;
 }
 @font-face {
- font-family: "Vision";
-  src: url("Vision.ttf") format("truetype");
- font-weight: normal;
+  font-family: "Vision";
+  src: url("Website/fonts/Vision.ttf") format("truetype");
+  src: url("Agern-Bold.ttf") format("truetype");
+
   font-style: normal;
 }
 .hero-copy h1 {
   font-size: clamp(28px, 7vw, 70px);
   margin: 0 0 10px;
   line-height: 80px;
-  font-weight: 300;
-  font-family: "Vision", sans-serif;
+  font-weight: 600;
+  font-family: "Pixelify Sans", sans-serif;
 }
 .hero-copy h1 span {
   font-size: clamp(28px, 7vw, 100px);
@@ -1036,7 +1037,7 @@ nav.nav-glass::after {
   text-align: center;
   flex: 1 1 100%;
   color: #d19cff;
-  font-family: 'Vision', "Manrope", sans-serif;
+  font-family: "Vision", "Manrope", sans-serif;
   font-size: 20px;
 }
 
@@ -1375,7 +1376,7 @@ nav.nav-glass::after {
 
 .connect-sphere .connect-sphere__title {
   font-size: 2.3rem;
-  font-family: 'Vision', sans-serif;
+  font-family: "Vision", sans-serif;
   margin-bottom: -10px;
   color: #fff;
 }
@@ -1466,7 +1467,3 @@ nav.nav-glass::after {
 .connect-sphere .connect-sphere__social a:focus-visible::after {
   inset-block-start: 0;
 }
-
-
-
-
