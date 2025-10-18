@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D Hero - Darshan Rami</title>
+    <style>
+      /* ====== BASIC RESET ====== */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #0b0b0b;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden;
+        font-family: "Poppins", sans-serif;
+      }
+
+      .hero {
+        position: relative;
+        perspective: 1000px;
+        text-align: center;
+      }
+
+      /* ====== 3D GROUP ====== */
+      .group {
+        position: relative;
+        width: 350px;
+        height: 450px;
+        transform-style: preserve-3d;
+        transition: transform 0.2s ease-out;
+      }
+
+      /* ====== BEHIND TEXT ====== */
+      .behind-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) translateZ(-50px);
+        font-size: 200px;
+        font-weight: 800;
+        color: rgba(255, 255, 255, 0.05);
+        letter-spacing: 5px;
+        user-select: none;
+        pointer-events: none;
+      }
+
+      /* ====== CHARACTER IMAGE ====== */
+      .image-container {
+        width: 350px;
+        height: 350px;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        transform-style: preserve-3d;
+        will-change: transform;
+        transition: transform 0.2s ease-out;
+        z-index: 0;
+      }
+
+      .image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        border-radius: 10px;
+      }
+
+      /* ====== BLUR BOX ====== */
+      .info-box {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 20px;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        overflow: hidden;
+        z-index: 1;
+      }
+
+      /* Add subtle noise effect */
+      .info-box::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: url("https://www.transparenttextures.com/patterns/noise-pattern-with-subtle-grain.png");
+        opacity: 0.2;
+        pointer-events: none;
+      }
+
+      .info-box h1 {
+        font-size: 28px;
+        letter-spacing: 2px;
+        z-index: 1;
+      }
+
+      .info-box p {
+        font-size: 14px;
+        margin: 5px 0;
+        color: #ccc;
+      }
+
+      .info-box hr {
+        width: 40%;
+        margin: 10px auto;
+        border: none;
+        border-top: 2px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .info-box button {
+        margin-top: 8px;
+        padding: 8px 18px;
+        background: rgba(255, 255, 255, 0.1);
+        border: none;
+        border-radius: 30px;
+        color: white;
+        cursor: pointer;
+        font-size: 13px;
+        letter-spacing: 1px;
+        transition: background 0.2s ease;
+      }
+
+      .info-box button:hover {
+        background: rgba(255, 255, 255, 0.25);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hero">
+      <div class="group" id="tiltGroup">
+        <div class="behind-text">EDITOR</div>
+
+        <div class="image-container">
+          <!-- 👇 Replace your PNG file -->
+          <img src="aaa.png" alt="Face Image" />
+        </div>
+
+        <div class="info-box">
+          <h1>DARSHAN RAMI</h1>
+          <hr />
+          <p>Creative Video Editor & Graphic Designer</p>
+          <button>View Portfolio</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // ====== CUSTOM SETTINGS ======
+      // 🎚️ Adjust the intensity of the 3D movement
+      const movementStrength = 10; // Try between 5–25 for more or less motion
+
+      // Select the main group
+      const tiltGroup = document.getElementById("tiltGroup");
+
+      // Smooth 3D tilt based on cursor movement
+      document.addEventListener("mousemove", (e) => {
+        const { innerWidth, innerHeight } = window;
+        const x = (e.clientX / innerWidth - 0.5) * 2; // range -1 to 1
+        const y = (e.clientY / innerHeight - 0.5) * 2; // range -1 to 1
+
+        const rotateX = y * movementStrength * -1; // reverse for natural tilt
+        const rotateY = x * movementStrength;
+
+        tiltGroup.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+      });
+
+      // Reset when mouse leaves
+      document.addEventListener("mouseleave", () => {
+        tiltGroup.style.transform = "rotateX(0deg) rotateY(0deg)";
+      });
+    </script>
+  </body>
+</html>
