@@ -385,7 +385,7 @@ nav.nav-glass::after {
 }
 @font-face {
   font-family: "Vision";
-  src: url("Website/fonts/Vision.ttf") format("truetype");
+  src: url("Vision.ttf") format("truetype");
   src: url("Agern-Bold.ttf") format("truetype");
 
   font-style: normal;
@@ -1467,3 +1467,4 @@ nav.nav-glass::after {
 .connect-sphere .connect-sphere__social a:focus-visible::after {
   inset-block-start: 0;
 }
+
