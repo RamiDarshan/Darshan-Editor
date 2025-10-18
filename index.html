@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Portfolio</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Top navigation: centered glass box with logo left & links right -->
+    <!-- Top navigation -->
+    <div class="top-wrap">
+      <nav class="nav-glass" role="navigation" aria-label="Main">
+        <div class="logo">
+          <img src="Logo_.png" alt="logo" />
+          <div class="brand">Artypixal</div>
+        </div>
+
+        <div class="nav-links">
+          <a href="#Homes">Home</a>
+          <a href="#Expertise">Expertise</a>
+          <a href="#Creations">Creations</a>
+          <a href="#AISpace">AI Space</a>
+        </div>
+      </nav>
+    </div>
+
+    <!-- HERO -->
+    <header class="hero" id="Homes">
+      <!-- subtle moving lights behind everything -->
+      <div class="lights" aria-hidden="true">
+        <div class="blob one" data-parallax data-speed="0.02"></div>
+        <div class="blob two" data-parallax data-speed="-0.02"></div>
+        <div class="blob three" data-parallax data-speed="0.015"></div>
+      </div>
+
+      <!-- CUBE -->
+      <div class="cube-container">
+        <div class="cube" id="cube">
+          <div class="face front"></div>
+          <div class="face back"></div>
+          <div class="face right"></div>
+          <div class="face left"></div>
+          <div class="face top"></div>
+          <div class="face bottom"></div>
+        </div>
+      </div>
+      <!-- distortion overlay (SVG with turbulence) -->
+      <svg
+        class="distort"
+        width="100%"
+        height="100%"
+        preserveAspectRatio="none"
+        viewBox="0 0 800 600"
+        aria-hidden="true"
+      >
+        <filter id="wavy">
+          <feTurbulence
+            type="fractalNoise"
+            baseFrequency="0.8"
+            numOctaves="2"
+            seed="2"
+            stitchTiles="stitch"
+          />
+          <feDisplacementMap in="SourceGraphic" scale="40" />
+        </filter>
+        <rect
+          x="0"
+          y="0"
+          width="100%"
+          height="100%"
+          filter="url(#wavy)"
+          fill="white"
+          opacity="0.02"
+        ></rect>
+      </svg>
+
+      <div class="hero-inner">
+        <div class="character-wrap" data-parallax data-speed="0.4">
+          <!-- big PNG character image: replace with your transparent PNG -->
+          <img class="character" src="Character.png" alt="character" />
+        </div>
+        <div class="hero-copy" data-parallax data-speed="0.1">
+          <h1>Hi!, Itz <span>Darshan</span><span class="dot">.</span></h1>
+          <p>
+            Video editor & motion designer creating viral visuals powered by AI
+            precision and storytelling energy that captivates audiences
+            instantly.
+          </p>
+        </div>
+      </div>
+
+      <!-- huge 'PORTFOLIO' background title -->
+      <div class="bg-title">PORTFOLIO</div>
+
+      <!-- tiny noise layer -->
+      <div class="noise"></div>
+
+      <!-- section divider: curved SVG that transitions to white background below -->
+      <!-- curved bottom divider with glowing moving stroke -->
+      <!-- section divider -->
+      <svg
+        class="section-divider"
+        viewBox="0 0 1440 120"
+        preserveAspectRatio="none"
+        style="
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: -1px;
+          z-index: 30;
+          overflow: visible;
+        "
+      >
+        <!-- main filled curve -->
+        <path
+          d="M0,40 C120,120 360,120 720,60 C1080,0 1320,0 1440,40 L1440,120 L0,120 Z"
+          fill="#000000"
+        ></path>
+
+        <!-- marker definition -->
+        <defs>
+          <marker
+            id="pen-tip"
+            markerWidth="8"
+            markerHeight="8"
+            refX="0"
+            refY="3"
+            orient="auto"
+          >
+            <polygon points="0 0, 6 3, 0 6" fill="#9b5cff" />
+          </marker>
+        </defs>
+
+        <!-- glowing stroke -->
+        <path
+          class="glow-stroke"
+          d="M0,40 C120,120 360,120 720,60 C1080,0 1320,0 1440,40"
+          fill="transparent"
+          stroke-width="4"
+          stroke-linecap="round"
+          marker-end="url(#pen-tip)"
+        />
+      </svg>
+      <img src="Shape1.png" alt="shape" class="rotating-shape" />
+    </header>
+
+    <!-- white section after hero -->
+    <!-- white section after hero -->
+    <main class="after" id="Expertise">
+      <!-- SKILLS SECTION -->
+      <div class="glow-zone" id="glowZoneRoot">
+        <div class="glow-card" style="top: 30%; left: 25%">Video Editing</div>
+        <div class="glow-card" style="top: 50%; left: 45%">Graphic Design</div>
+        <div class="glow-card" style="top: 70%; left: 50%">Motion Graphics</div>
+        <div class="glow-card" style="top: 40%; left: 60%">UI-UX Design</div>
+        <div class="glow-card" style="top: 60%; left: 10%">Web Developer</div>
+        <div class="glow-card" style="top: 20%; left: 10%">AI Engeer</div>
+
+        <!-- Add inside your <div class="glow-zone" id="glowZoneRoot"> -->
+        <!-- Add inside your <div class="glow-zone" id="glowZoneRoot"> -->
+        <img
+          src="icon1.png"
+          class="glow-icon"
+          data-posx="20"
+          data-posy="8"
+          data-scale="1.5"
+          data-rotate="10"
+          style="filter: drop-shadow(0px 0px 10px #ffffff)"
+        />
+        <img
+          src="icon2.png"
+          class="glow-icon"
+          data-posx="70"
+          data-posy="4"
+          data-scale="1"
+          style="filter: drop-shadow(0px 0px 10px #ffffff)"
+          data-rotate="-20"
+        />
+        <img
+          src="icon3.png"
+          class="glow-icon"
+          data-posx="30"
+          data-posy="50"
+          data-rotate="-20"
+          style="filter: drop-shadow(0px 0px 10px #ffffff)"
+          data-scale="1.7"
+        />
+        <img
+          src="icon4.png"
+          class="glow-icon"
+          data-posx="80"
+          data-posy="20"
+          data-scale="1.8"
+          style="filter: drop-shadow(0px 0px 10px #ffffff)"
+          data-rotate="10"
+        />
+        <img
+          src="icon5.png"
+          class="glow-icon"
+          data-posx="20"
+          data-posy="75"
+          style="filter: drop-shadow(0px 0px 10px #ffffff)"
+          data-scale="2"
+          data-rotate="330"
+        />
+        <img
+          src="icon6.png"
+          class="glow-icon"
+          data-posx="50"
+          data-posy="80"
+          data-scale="2.3"
+          style="filter: drop-shadow(0px 0px 10px #ffffff)"
+          data-rotate="10"
+        />
+        <img
+          src="icon7.png"
+          class="glow-icon"
+          data-posx="50"
+          data-posy="20"
+          data-scale="1.4"
+          style="filter: drop-shadow(0px 0px 10px #ffffff)"
+          data-rotate="20"
+        />
+        <img
+          src="icon8.png"
+          class="glow-icon"
+          data-posx="10"
+          data-posy="35"
+          data-scale="2"
+          style="filter: drop-shadow(0px 0px 10px #ffffff)"
+          data-rotate="20"
+        />
+        <img
+          src="icon9.png"
+          class="glow-icon"
+          data-posx="15"
+          data-posy="45"
+          data-scale="1.2"
+          style="filter: drop-shadow(0px 0px 10px #ffffff)"
+          data-rotate="90"
+        />
+        <img
+          src="icon10.png"
+          class="glow-icon"
+          data-posx="75"
+          data-posy="60"
+          data-scale="1"
+          style="filter: drop-shadow(0px 0px 10px #ffffff)"
+          data-rotate="2"
+        />
+      </div>
+    </main>
+
+    <!-- Videos section-->
+    <section class="video-section" id="Creations">
+      <div class="video-container">
+        <div class="video-title">
+          <h2>Crafted videos</h2>
+          <p>
+            showcase creativity, precision, and storytelling through every frame
+            I design.
+          </p>
+        </div>
+
+        <div class="videos-grid">
+          <!-- YouTube videos -->
+          <div class="video-item vertical">
+            <iframe
+              src="https://www.youtube.com/embed/w4-ULiNtAFE"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+
+          <div class="video-item vertical">
+            <iframe
+              src="https://www.youtube.com/embed/7e0hIC2BpcE"
+              title="Short Video 2"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="video-item horizontal">
+            <iframe
+              src="https://www.youtube.com/embed/7p7mv2OrLtc"
+              title="Long Video 1"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="video-item vertical">
+            <iframe
+              src="https://www.youtube.com/embed/1CpM9CxvjSc"
+              title="Short Video 3"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="video-item horizontal">
+            <iframe
+              src="https://www.youtube.com/embed/wTirPNxHoCs"
+              title="Long Video 2"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="video-item vertical">
+            <iframe
+              src="https://www.youtube.com/embed/ZXQfv3J797o"
+              title="Short Video 4"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="video-item horizontal">
+            <iframe
+              src="https://www.youtube.com/embed/SMPu4llqufM"
+              title="Long Video 3"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="video-item vertical">
+            <iframe
+              src="https://www.youtube.com/embed/O6C-ieMYFDY"
+              title="Short Video 5"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <!-- Here_Change_IT -->
+          <div class="video-item horizontal">
+            <iframe
+              src="https://www.youtube.com/embed/Xy2wGpAyliA"
+              title="Long Video 4"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="video-item vertical">
+            <iframe
+              src="https://www.youtube.com/embed/xm01cfg07fE"
+              title="Short Video 6"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="video-item vertical">
+            <iframe
+              src="https://www.youtube.com/embed/v9iyk9g4Q-Q"
+              title="Long Video 5"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="video-item horizontal">
+            <iframe
+              src="https://www.youtube.com/embed/D9YNOuLyn6w"
+              title="Long Video 6"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI ------------------------------------------------ -->
+    <section class="ai-showcase" id="aiShowcase">
+      <div class="ai-header" id="AISpace">
+        <h1>AI Prompting</h1>
+        <p>Showcasing my creative AI image prompt skills</p>
+        <button class="insta-btn">
+          <a
+            href="https://www.instagram.com/artypixal"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            @artypixal.ai</a
+          >
+
+          <span class="sparkle"></span>
+        </button>
+      </div>
+
+      <div class="ai-images">
+        <div class="shape square scale-large">
+          <img src="AIImage1.png" alt="" />
+        </div>
+        <div class="shape rectangle scale-small">
+          <img src="AIImage2.png" alt="" />
+        </div>
+        <div class="shape rectangle scale-medium">
+          <img src="AIImage5.png" alt="" />
+        </div>
+        <div class="shape square scale-large">
+          <img src="AIImage8.png" alt="" />
+        </div>
+        <div class="shape square scale-small">
+          <img src="AIImage9.png" alt="" />
+        </div>
+        <div class="shape rectangle scale-medium">
+          <img src="AIImage10.png" alt="" />
+        </div>
+        <div class="shape square scale-medium">
+          <img src="AIImage11.png" alt="" />
+        </div>
+        <div class="shape rectangle scale-large">
+          <img src="AIImage12.png" alt="" />
+        </div>
+        <div class="shape square scale-small">
+          <img src="AIImage13.png" alt="" />
+        </div>
+        <div class="shape rectangle scale-large">
+          <img src="AIImage14.png" alt="" />
+        </div>
+        <div class="shape rectangle scale-small">
+          <img src="AIImage15.png" alt="" />
+        </div>
+        <div class="shape rectangle scale-medium">
+          <img src="AIImage16.png" alt="" />
+        </div>
+        <div class="shape square scale-large">
+          <img src="AIImage17.png" alt="" />
+        </div>
+        <div class="shape square scale-small">
+          <img src="AIImage18.png" alt="" />
+        </div>
+        <div class="shape rectangle scale-medium">
+          <img src="AIImage19.png" alt="" />
+        </div>
+        <div class="shape square scale-medium">
+          <img src="AIImage20.png" alt="" />
+        </div>
+        <div class="shape rectangle scale-large">
+          <img src="AIImage21.png" alt="" />
+        </div>
+        <div class="shape square scale-small">
+          <img src="AIImage22.png" alt="" />
+        </div>
+        <div class="shape rectangle scale-large">
+          <img src="AIImage23.png" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <div class="cursor-circle" id="aiCursorCircle"></div>
+    <!-- FOOTER ------------------------------------------------------------------------------------------------------------->
+    <footer class="footer">
+      <!-- top stroke -->
+      <div class="footer-top-line"></div>
+
+      <div class="footer-content">
+        <!-- left links -->
+        <div class="footer-links">
+          <a href="#Homes">Home</a>
+          <a href="#Expertise">Expertise</a>
+          <a href="#Creations">Creations</a>
+          <a href="#AISpace">AI Space</a>
+        </div>
+
+        <!-- center name -->
+        <div class="footer-name">Darshan Rami</div>
+
+        <!-- right logo -->
+        <div class="footer-logo">
+          <img src="Logo_.png" alt="logo" />
+        </div>
+      </div>
+    </footer>
+    <!-- CONTACT CIRCLE -->
+    <!-- From Uiverse.io by Creatlydev -->
+    <div class="btn-wrapper" id="contactCircle">
+      <button class="btn">
+        <span class="btn-txt">Say Hi</span>
+        <div class="dot pulse"></div>
+      </button>
+    </div>
+    <!-- CONTACT CARD -->
+    <div class="contact-overlay" id="contactOverlay">
+      <div class="contact-card" id="contactCard">
+        <!-- 🌐 CONNECT SPHERE (Contact Overlay) -->
+        <div class="connect-sphere">
+          <div class="connect-sphere__overlay" id="contactOverlay">
+            <div class="connect-sphere__card" id="contactCard">
+              <h3 class="connect-sphere__title">Itz Darshan Rami</h3>
+              <p class="connect-sphere__phone">
+                Let’s connect and build something amazing.
+              </p>
+
+              <ul class="connect-sphere__social">
+                <!-- Instagram -->
+                <li
+                  data-tooltip="Instagram"
+                  style="
+                    --bg: linear-gradient(
+                      -45deg,
+                      #feda75,
+                      #fa7e1e,
+                      #d62976,
+                      #962fbf,
+                      #4f5bd5
+                    );
+                  "
+                >
+                  <a
+                    href="https://www.instagram.com/artypixal"
+                    target="_blank"
+                    aria-label="Instagram"
+                  >
+                    <i class="fa-brands fa-instagram"></i>
+                  </a>
+                </li>
+
+                <!-- LinkedIn -->
+                <li data-tooltip="LinkedIn" style="--bg: #0077b5">
+                  <a
+                    href="https://in.linkedin.com/in/darshan-rami-6741b02a0"
+                    target="_blank"
+                    aria-label="LinkedIn"
+                  >
+                    <i class="fa-brands fa-linkedin-in"></i>
+                  </a>
+                </li>
+
+                <!-- Call -->
+                <li data-tooltip="Call" style="--bg: #34af23">
+                  <a href="tel:+919427954901" aria-label="Call">
+                    <i class="fa-solid fa-phone"></i>
+                  </a>
+                </li>
+
+                <!-- Mail -->
+                <li data-tooltip="Mail" style="--bg: #d93025">
+                  <a href="mailto:artypixal@gmail.com" aria-label="Mail">
+                    <i class="fa-solid fa-envelope"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
