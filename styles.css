@@ -7,7 +7,7 @@
   --glass-stroke: rgba(255, 255, 255, 0.22);
   --accent: #9b5cff;
   --white: #ffffff;
-  --character-scale: 2.1; /* adjust this for zooming character image */
+  --character-scale: 3.1; /* adjust this for zooming character image */
   --tilt-strength: 80; /* adjust this for how much text boxes tilt */
 }
 * {
@@ -256,14 +256,13 @@ nav.nav-glass::after {
   top: 50%;
   transform: translate(-50%, -50%);
   font-weight: 900;
-  font-size: clamp(80px, 18vw, 320px);
   font-family: "League Gothic", sans-serif;
   opacity: 0.9;
   white-space: nowrap;
   z-index: 1;
   text-transform: uppercase;
   pointer-events: none;
-  font-size: 650px;
+  font-size: 600px;
   background: linear-gradient(to bottom, #9b5cff66, #9b5cff00);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -803,6 +802,16 @@ nav.nav-glass::after {
   background-color: #000000;
 }
 
+.rotating-shape2 {
+  position: absolute;
+  height: 700px;
+  width: auto;
+  bottom: 5px;
+  left: -290px;
+  animation: rotateLoop 20s linear infinite;
+  pointer-events: none;
+  opacity: 20%;
+}
 .ai-header {
   margin-bottom: 50px;
 }
@@ -889,6 +898,7 @@ nav.nav-glass::after {
   pointer-events: none;
   user-select: none;
   transition: transform 0.3s ease;
+  z-index: 2;
 }
 
 /* Base sizes */
@@ -1380,7 +1390,13 @@ nav.nav-glass::after {
   margin-bottom: -10px;
   color: #fff;
 }
-
+.connect-sphere .connect-sphere__title span {
+  background: linear-gradient(to bottom, #ffffff, #b488ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* for Firefox */
+  text-shadow: 0 0 10px #ffffff99, 0 0 20px #7e22ce80, 0 0 40px #a955f78a;
+}
 .connect-sphere .connect-sphere__phone {
   font-size: 1rem;
   margin-bottom: 30px;
