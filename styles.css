@@ -394,7 +394,9 @@ nav.nav-glass::after {
   margin: 0 0 10px;
   line-height: 80px;
   font-weight: 600;
-  font-family: "Pixelify Sans", sans-serif;
+  font-family: "Pixelify Sans", sans-serif; 
+  z-index: 999;
+
 }
 .hero-copy h1 span {
   font-size: clamp(28px, 7vw, 100px);
@@ -1483,3 +1485,4 @@ nav.nav-glass::after {
 .connect-sphere .connect-sphere__social a:focus-visible::after {
   inset-block-start: 0;
 }
+
