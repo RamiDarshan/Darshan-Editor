@@ -7,7 +7,7 @@
   --glass-stroke: rgba(255, 255, 255, 0.22);
   --accent: #9b5cff;
   --white: #ffffff;
-  --character-scale: 2.6; /* adjust this for zooming character image */
+  --character-scale: 3.1; /* adjust this for zooming character image */
   --tilt-strength: 80; /* adjust this for how much text boxes tilt */
 }
 * {
@@ -1485,6 +1485,7 @@ nav.nav-glass::after {
 .connect-sphere .connect-sphere__social a:focus-visible::after {
   inset-block-start: 0;
 }
+
 
 
 
