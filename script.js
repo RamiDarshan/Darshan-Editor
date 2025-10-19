@@ -58,8 +58,8 @@ const glowArea = document.querySelector(".glow-zone");
 const glowCards = document.querySelectorAll(".glow-zone .glow-card");
 
 /* ====== CONFIGURABLE SETTINGS ====== */
-const glowRadius = 200; // 🔧 cursor effect radius
-const trailCount = 30; // 🔧 number of dots
+const glowRadius = 300; // 🔧 cursor effect radius
+const trailCount = 10; // 🔧 number of dots
 const trailSmooth = 0.2; // 🔧 smoothness (0.1–0.3)
 const trailSizeStart = 150; // 🔧 biggest dot size
 const trailSizeEnd = 3; // 🔧 smallest dot size
